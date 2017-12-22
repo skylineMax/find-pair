@@ -1,0 +1,23 @@
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  color: white;
+}
+
+input[type=button] {
+      padding: 20px;
+      margin: 1vw;
+      font-size: 3em;
+      color: #3ab10e;
+      border: 1px #3ab10e solid;
+      border-radius: 1vw;
+}
+input[type=button]:hover {
+      background-color: blue;
+}
