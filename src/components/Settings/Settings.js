@@ -1,63 +1,47 @@
 import React, {Component} from 'react';
 import '../../App.css';
 import '../Container/Container.css';
-import Square from '../Square/Square';
-import '../Square/Square.css';
+import Squares2x2 from '../Squares/Squares2x2/Squares2x2';
+import Squares2x3 from '../Squares/Squares2x3/Squares2x3';
+import Squares3x4 from '../Squares/Squares3x4/Squares3x4';
+import Squares4x4 from '../Squares/Squares4x4/Squares4x4';
+import SquaresX from '../Squares/SquaresX';
+import '../Squares/Square.css';
 
 class Settings extends Component {
-	state = {level: 1};
+	constructor() {
+		super();
+		this.state = {level: 1};
+	}
 
-	chooseLevel = (event) => {
-		this.setState({level: event.target.id});
+	chooseLevel = (e) => {
+		this.setState({level: e.target.id});
+		
 	};
 
-
 	render() {
-		const {level} = this.state;
-		switch (level){
+
+		switch (this.state.level){
 	      case "1":
-	        this.container = 
-	          <div className="Container Container2x2">
-	            <Square /><Square />
-	          	<Square /><Square />
-	          </div>;
+	        this.container = <Squares2x2 array={[1,2,3,4]} />;
+	        //this.container = <Squares2x2 />
 	       	break;
 	      case "2":
-	        this.container = 
-	          <div className="Container Container2x3">
-	            <Square /><Square />
-	            <Square /><Square />
-	            <Square /><Square />
-	          </div>;
+	        this.container = <Squares2x3 array={[1,2,3,4,5,6]} />;
 	       	break;
 	      case "3":
-	        this.container = 
-	          <div className="Container Container3x4">
-	          	<Square /><Square /><Square /><Square />
-		          <Square /><Square /><Square /><Square />
-		          <Square /><Square /><Square /><Square />
-	          </div>;
+	        this.container = <Squares3x4 />;
 	       	break;
 	      case "4":
-	        this.container = 
-	        <div className="Container Container4x4">
-	          <Square /><Square /><Square /><Square />
-	          <Square /><Square /><Square /><Square />
-	          <Square /><Square /><Square /><Square />
-	          <Square /><Square /><Square /><Square />
-	        </div>;
+	        this.container = <Squares4x4 />;
+	        break;
+	      case "5":
+	        this.container = <SquaresX name="1"/>;
 	        break;
 	      default:
-	      	this.container = 
-	          (<div className="Container Container2x2">
-	            <Square /><Square />
-	          	<Square /><Square />
-	          </div>);
+	        this.container = <Squares2x2 />;
 	   }
-	   const square3x4 = {
-	   	'width': '80px',
-			'height': '80px'
-	   };
+		
 	   const setStyle = {
 	   	'display': 'flex',
 	   	'flexWrap': 'wrap',
@@ -72,6 +56,7 @@ class Settings extends Component {
 					<input type="button" id="2" onClick={this.chooseLevel} value="2x3"/>
 					<input type="button" id="3" onClick={this.chooseLevel} value="3x4"/>
 					<input type="button" id="4" onClick={this.chooseLevel} value="4x4"/>
+					<input type="button" id="5" onClick={this.chooseLevel} value="X"/>
 				</div>
 			</div>	
 		);

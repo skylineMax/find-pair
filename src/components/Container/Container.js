@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Container.css';
 import Settings from '../Settings/Settings';
-import Square from '../Square/Square';
+import Square from '../Squares/Square';
 
 class Container extends Component {
 	render() {

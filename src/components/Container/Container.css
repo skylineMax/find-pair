@@ -65,3 +65,7 @@
 		max-height: 440px;
 	}
 }
+
+@media screen and(orientation: landscape) {
+	
+}

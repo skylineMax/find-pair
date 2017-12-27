@@ -1,32 +1,41 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import '../../App.css';
 
 class StopWatch extends Component {
-	state = { time: 0, isRunning: false };
-	runClick = () => {
-		this.setState(state => {
-			if(state.isRunning) {
-				clearInterval(this.timer);
-			} else {
-				const startTime = Date.now() - this.state.time;
+    state = { time: 0, isRunning: false, timeOut: 0 };
+    handleClick = () => {
+            this.setState(state => {
+            	setTimeout(() => {
+                if (state.isRunning) {
+                    clearInterval(this.timer);
+                } else {
+                    const startTime = Date.now() - this.state.time;
 
-				this.timer = setInterval(() => {
-						this.setState({time: Date.now() - startTime});
-				});
-			}
-			return {isRunning: !state.isRunning};
-		});
-	};
+                    this.timer = setInterval(() => {
+                        this.setState({ time: Date.now() - startTime });
+                    });
+                } }, this.state.timeOut);
+                return { isRunning: !state.isRunning };
 
-	render() {
-		const {time, isRunning} = this.state;
-		return(
-			<div style={{textAlign: 'center'}}>
-				<input type="button" onClick={this.runClick} value={isRunning ? 'Stop' : 'Start'} /><br />
-				<span>{time}ms</span>
-			</div>
-		);
-	}
+            });
+       
+    };
+
+    handleChange = (e) => {
+    	this.setState({timeOut: e.target.value});
+    }
+
+    render() {
+        const { time, isRunning, timeOut } = this.state;
+        return ( 
+        	<div style = { { textAlign: 'center' } } >
+            <input type = "button" onClick = { this.handleClick } value = { isRunning ? 'Stop' : 'Start' }/> <br / >
+            <input type = "range" onChange={this.handleChange}  min="0" max="5000" step="1000" />
+            <span> { timeOut/1000 }sec </span>
+            <span > { time } ms < /span> 
+         </div>
+        );
+    }
 }
 
 export default StopWatch;
