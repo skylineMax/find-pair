@@ -1,66 +1,111 @@
 import React, {Component} from 'react';
+import Container from '../Container/Container';
 import '../../App.css';
-import '../Container/Container.css';
-import Squares2x2 from '../Squares/Squares2x2/Squares2x2';
-import Squares2x3 from '../Squares/Squares2x3/Squares2x3';
-import Squares3x4 from '../Squares/Squares3x4/Squares3x4';
-import Squares4x4 from '../Squares/Squares4x4/Squares4x4';
-import SquaresX from '../Squares/SquaresX';
-import '../Squares/Square.css';
+import './Settings.css';
 
-class Settings extends Component {
-	constructor() {
-		super();
-		this.state = {level: 1};
+class Null extends Component {
+	render(){
+		return <div />;
 	}
+}
+class Settings extends Component {
+	constructor(props) {
+    super(props);
+    this.state = {
+    	timeOut: 0, 
+    	timer: 60000,
+    	route: window.location.hash.substr(1)
+    }
+    this.mode = "";
+  }
 
-	chooseLevel = (e) => {
-		this.setState({level: e.target.id});
-		
-	};
+   componentDidMount() {
+	   window.addEventListener('hashchange', () => {
+	      this.setState({
+	        route: window.location.hash.substr(1)
+	      })
+	   });
+    	this.settings = document.getElementsByClassName('Settings')[0];
+   	this.return = document.getElementById('return');
+   	this.point = document.getElementById('point');
+   }
+
+	handleShow = (event) => {
+    	this.setState({timeOut: event.target.value});
+
+   }
+
+   handleTimer = (event) => {
+    	this.setState({timer: event.target.value});
+   }
+
+   handleMode = (event) => {
+   	event.target.focus();
+   	this.mode = event.target.id;
+   	this.point.classList.remove('block');
+   }
+
+   handleSet = () => {
+	   this.settings.style.display = 'none';
+	   this.return.style.display = 'flex';
+
+   }
+
+   handleSettings = () => {
+   	this.settings.style.display = 'block';
+   	this.return.style.display = 'none';
+
+   }
 
 	render() {
+		const { timeOut, timer, route } = this.state;
+		let Child;
 
-		switch (this.state.level){
-	      case "1":
-	        this.container = <Squares2x2 array={[1,2,3,4]} />;
-	        //this.container = <Squares2x2 />
-	       	break;
-	      case "2":
-	        this.container = <Squares2x3 array={[1,2,3,4,5,6]} />;
-	       	break;
-	      case "3":
-	        this.container = <Squares3x4 />;
-	       	break;
-	      case "4":
-	        this.container = <Squares4x4 />;
-	        break;
-	      case "5":
-	        this.container = <SquaresX name="1"/>;
-	        break;
-	      default:
-	        this.container = <Squares2x2 />;
-	   }
-		
-	   const setStyle = {
+		switch(this.state.route) {
+			case '/container': Child = Container; break;
+			case '/settings': Child = Null;
+			default: Child = Null;
+		}
+
+		const containerStyle = {
 	   	'display': 'flex',
 	   	'flexWrap': 'wrap',
-	   	'justifyContent': 'space-around',
+	   	'flexDirection': 'column',
+	   	'justifyContent': 'space-between',
 	   	'marginTop': '50px'
 	   };
-		return(
-			<div>
-				{this.container}
-				<div style={setStyle}>
-					<input type="button" id="1" onClick={this.chooseLevel} value="2x2"/>
-					<input type="button" id="2" onClick={this.chooseLevel} value="2x3"/>
-					<input type="button" id="3" onClick={this.chooseLevel} value="3x4"/>
-					<input type="button" id="4" onClick={this.chooseLevel} value="4x4"/>
-					<input type="button" id="5" onClick={this.chooseLevel} value="X"/>
-				</div>
-			</div>	
+	   const mode = this.mode;
+		return (
+			<div style={containerStyle}>	
+		      <div {...this.props } className="Settings">
+		      	<h1>Settings</h1>
+		      	<div className="property">
+			      	<label>Time of showing pictures</label><br />
+			      	<input type = "range" onChange={this.handleShow}  min="0" max="5000" step="1000" /> <br />
+			      	<span>{timeOut/1000} seconds</span>
+			      </div>
+		      	<div className="property">	
+			      	<label>Game timer</label><br />
+			      	<input type = "range" onChange={this.handleTimer}  min="60000" max="300000" step="60000" /> <br />
+			      	<span>{timer/60000} minutes</span>
+			      </div>
+			      <div className="property">	
+			      	<label>Game mode</label><br />
+			      	<input type="button" id="xs" onClick={this.handleMode} value="2x2"/>
+						<input type="button" id="s" onClick={this.handleMode} value="2x3"/>
+						<input type="button" id="m" onClick={this.handleMode} value="3x4"/>
+						<input type="button" id="l" onClick={this.handleMode} value="4x4"/>
+			      </div>
+			      <div title="Choose the game mode please">	
+			      	<a id="point" className="block" href="#/container" ><button id="start" onClick={this.handleSet}>Set</button></a>
+			      </div>
+		      </div>
+		      <Child props={this.state} mode={mode} />
+		      <div id="return">	
+			      	<a href="#/settings"><button id="start" onClick={this.handleSettings}>Settings</button></a>
+			   </div>
+		   </div>
 		);
-
 	}
 }
 

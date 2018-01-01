@@ -9,6 +9,6 @@ function mixx(arr) {
           }
       }
       return arr;
-    }
+}
 
 export default mixx;

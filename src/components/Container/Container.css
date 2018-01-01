@@ -1,11 +1,14 @@
 .Container {
 	display: flex;
 	flex-wrap: wrap;
-	align-content: stretch;
 	margin: auto;
-	background-color: #56246b;
 }
-
+.block {
+	pointer-events: none;
+}
+.unblock {
+	pointer-events: auto;
+}
 .Container2x2 {
 	max-width: 320px;
 	max-height: 320px;
@@ -64,8 +67,4 @@
 		max-width: 440px;
 		max-height: 440px;
 	}
-}
-
-@media screen and(orientation: landscape) {
-	
 }

@@ -1,20 +1,34 @@
 import React, { Component } from 'react';
 import './App.css';
-import Container from './components/Container/Container';
 import Settings from './components/Settings/Settings';
-import StopWatch from './components/StopWatch/StopWatch'
-
-
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      route: window.location.hash.substr(1)
+    }
+  }
+  
+  componentDidMount() {
+    window.addEventListener('hashchange', () => {
+      this.setState({
+        route: window.location.hash.substr(1)
+      })
+    })
+  }
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <StopWatch />
         </header>
-       
-        <Settings/>
+        <div className="App-main">
+          <Settings />
+        </div>
+        <footer className="App-footer">
+
+        </footer>
       </div>
     );
   }

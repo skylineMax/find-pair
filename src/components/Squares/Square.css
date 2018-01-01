@@ -4,42 +4,21 @@
 	margin: 5px;
 	text-align: center;
 	background-color: black; 
+	border-radius: 5px;
 }
-
-
-img {
-	width: 150px;
-	height: 150px;
-}
-
 
 @media screen and (max-width: 1000px) {
 	.Square {
 		width: 130px;
 		height: 130px;
+		background-size: 130px;
 	}
-	img {
-		width: 130px;
-		height: 130px;
-	}
-
 }
 
 @media screen and (max-width: 600px) {
 	.Square {
 		width: 100px;
 		height: 100px;
+		background-size: 100px;
 	}
-	.Square3x4 {
-		width: 80px;
-		height: 80px;
-		margin: 5px;
-		text-align: center;
-		background-color: black;
-	}
-	img {
-		width: 100px;
-		height: 100px;
-	}
-
 }
