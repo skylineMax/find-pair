@@ -7,10 +7,181 @@
   outline: none;
 }
 
+body {
+  background-color: #2d4e1d; 
+}
 
 html, body, #root {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #2d4e1d; 
 }
+
+.app {
+  display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	max-width: 1200px;
+}
+
+.app-main { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;;
+ 
+}
+
+.square {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 5px;
+	width: 10vw;
+ 	height: 10vw;
+	text-align: center;
+	background-color: black; 
+	border-radius: 5px;
+}
+
+
+.container {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	margin: auto;
+	max-width: 1200px;
+	justify-content: center;
+ 
+}
+
+input[type=button] {
+      padding: 10px;
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #3ab10e;
+      border: 1px #3ab10e solid;
+      border-radius: 1vw;
+}
+input[type=button]:hover {
+      background-color: black;
+}
+
+#timer {
+  margin: 25px 0;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+}
+
+#start {
+	padding: 15px 20px;
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #3ab10e;
+	border: 1px #3ab10e solid;
+	border-radius: 1vw;
+}
+#start:hover{
+	background-color: black;
+}
+
+
+.settings {
+  width: 250px;
+	padding: 20px;
+	text-align: center;
+	color: white;
+	border: 1px solid white;
+	border-radius: 5px;
+}
+.settings h1 {
+	font-size: 2em;
+}
+
+.col {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+.property {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+
+	margin: 1em 0;
+	padding: 5px 0;
+}
+
+.labels {
+	justify-content: space-around;
+}
+
+
+.rows, .cols {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+  justify-content: space-around;
+}
+
+.rows > span, .cols > span {
+  margin-bottom: 15px;
+} 
+
+
+#start, #back {
+	padding: 10px;
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #3ab10e;
+	border: 1px #3ab10e solid;
+	border-radius: 1vw;
+}
+#start:hover, #back:hover{
+	background-color: black;
+}
+
+#back {
+  margin-top: 30px;
+}
+
+#return {
+	display: none;
+	justify-content: center;
+	margin-top: 25px;
+}
+
+.property label {
+	display: block;
+	font-size: 1.2em;
+	padding: 5px 0;
+	margin-bottom: 20px;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+}
+.property input {
+	margin: 10px 0;
+}
+.property span {
+	font-size: 1em;
+}
+
+#start {
+	padding: 15px 20px;
+}
+
+input[type="number"] {
+	width: 50px;
+	height: 30px;
+	font-size: 1em;
+	font-weight: bold;
+}
+
