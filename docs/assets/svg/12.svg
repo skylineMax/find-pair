@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="395px" height="395px" viewBox="0 0 395 395" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background: #264A60;">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>IBM Digital Commerce</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="IBM-Digital-Commerce" fill="#E7F0F3">
+            <g id="IBM-logo" transform="translate(83.000000, 152.000000)">
+                <polygon id="Shape" points="216 30 216 24 184.201522 24 182 30"></polygon>
+                <rect id="Rectangle-path" fill-rule="nonzero" x="127" y="86" width="31" height="6"></rect>
+                <rect id="Rectangle-path" fill-rule="nonzero" x="127" y="73" width="31" height="6"></rect>
+                <polygon id="Shape" points="173 30 170.795655 24 139 24 139 30"></polygon>
+                <rect id="Rectangle-path" fill-rule="nonzero" x="139" y="49" width="19" height="6"></rect>
+                <polygon id="Shape" points="158.247069 42 158.247069 37.2250454 158.38191 37.2250454 160.228643 42 194.642379 42 196.61809 37.2250454 196.752931 37.2250454 196.752931 42 216 42 216 36 179.346734 36 177.5 40.5299456 177.365159 40.5299456 175.524288 36 139 36 139 42"></polygon>
+                <rect id="Rectangle-path" fill-rule="nonzero" x="139" y="61" width="19" height="6"></rect>
+                <polygon id="Shape" points="190.788684 55 193 49 163 49 165.205543 55"></polygon>
+                <polygon id="Shape" points="186.756656 67 189 61 167 61 169.237487 67"></polygon>
+                <polygon id="Shape" points="181.830501 79 184 73 171 73 173.169499 79"></polygon>
+                <polygon id="Shape" points="176 86 178.177879 92 178.95325 92 181 86"></polygon>
+                <polygon id="Shape" points="127 12 127 18 170 18 167.767521 12"></polygon>
+                <polygon id="Shape" points="166 6 163.762055 0 127 0 127 6"></polygon>
+                <path d="M51,12 L51,18 L122,18 C121.609024,15.8181818 119.665817,12 119.665817,12 L51,12 Z" id="Shape"></path>
+                <path d="M120.857143,30 C120.857143,30 122,25.9527273 122,24 L102,24 L102,30 L120.857143,30 Z" id="Shape"></path>
+                <path d="M118,55 C118,55 114.615599,50.8777778 112.405614,49 L64,49 L64,55 L118,55 Z" id="Shape"></path>
+                <path d="M51,73 L51,79 L119.66505,79 C120.824028,77.1478542 121.615069,75.115158 122,73 L51,73 Z" id="Shape"></path>
+                <path d="M51,86 L51,92 L96.3369853,92 C110.944855,92 115,86 115,86 L51,86 Z" id="Shape"></path>
+                <path d="M111.665351,42 C114.085997,40.3159239 116.221995,38.2927673 118,36 L64,36 L64,42 L111.665351,42 Z" id="Shape"></path>
+                <path d="M121.999951,67 C122.004976,64.9502502 121.62063,62.9168646 120.865846,61 L102,61 L102,67 L121.999951,67 Z" id="Shape"></path>
+                <rect id="Rectangle-path" fill-rule="nonzero" x="64" y="61" width="19" height="6"></rect>
+                <polygon id="Shape" points="64 24 64 24 64 30 83 30 83 24"></polygon>
+                <path d="M115,6 C109.612618,1.87395737 103.43641,0 96.4713777,0 L51,0 L51,6 L115,6 Z" id="Shape"></path>
+                <rect id="Rectangle-path" fill-rule="nonzero" x="13" y="61" width="19" height="6"></rect>
+                <rect id="Rectangle-path" fill-rule="nonzero" x="0" y="73" width="44" height="6"></rect>
+                <rect id="Rectangle-path" fill-rule="nonzero" x="0" y="86" width="44" height="6"></rect>
+                <rect id="Rectangle-path" fill-rule="nonzero" x="0" y="0" width="44" height="6"></rect>
+                <rect id="Rectangle-path" fill-rule="nonzero" x="0" y="12" width="44" height="6"></rect>
+                <rect id="Rectangle-path" fill-rule="nonzero" x="13" y="24" width="19" height="6"></rect>
+                <rect id="Rectangle-path" fill-rule="nonzero" x="13" y="36" width="19" height="6"></rect>
+                <rect id="Rectangle-path" fill-rule="nonzero" x="13" y="49" width="19" height="6"></rect>
+                <rect id="Rectangle-path" fill-rule="nonzero" x="198" y="49" width="19" height="6"></rect>
+                <rect id="Rectangle-path" fill-rule="nonzero" x="198" y="61" width="19" height="6"></rect>
+                <rect id="Rectangle-path" fill-rule="nonzero" x="198" y="73" width="31" height="6"></rect>
+                <rect id="Rectangle-path" fill-rule="nonzero" x="198" y="86" width="31" height="6"></rect>
+                <polygon id="Shape" points="229 18 229 12 188.360716 12 186 18"></polygon>
+                <polygon id="Shape" points="229 6 229 0 193.45977 0 191 6"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
